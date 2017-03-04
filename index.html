@@ -2,11 +2,124 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>MISHKA - милые штуки ручной работы для дома</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <div class="page-header__logo"><img src="http://placehold.it/86x35" alt="logo"></div>
+      <nav class="main-nav">
+        <button class="main-nav__toggle"></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
+            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Милые штуки ручной работы для дома</h1>
+      <div class="header-menu">
+        <ul class="header-menu__buttons">
+          <li class="header-menu__btn"><a href="#">Предметы интерьера</a></li>
+          <li class="header-menu__btn"><a href="#">Детские игрушки</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="catalog-items">
+        <div class="catalog-item">
+            <h2>Вязаные корзинки</h2>
+            <h3 class="catalog-item__weeks-item">ТОВАР НЕДЕЛИ</h3>
+            <p class="catalog-item__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="catalog-item__table">
+              <tr class="catalog-item__table-row">
+                <td class="catalog-item__table-cell">Цвет:<td>
+                <td class="catalog-item__table-cell">«Тиффани»/серый</td>
+              </tr>
+              <tr class="catalog-item__table-row">
+                <td class="catalog-item__table-cell">Диаметр:</td>
+                <td class="catalog-item__table-cell">25 см</td>
+              </tr>
+              <tr class="catalog-item__table-row">
+                <td class="catalog-item__table-cell">Высота:</td>
+                <td class="catalog-item__table-cell">15 см</td>
+              </tr>
+            </table>
+          <div class="catalog-item__img">
+            <img src="http://placehold.it/260x315" alt="triple-set">
+          </div>
+          <div class="catalog-item__price">
+            Цена: 990 руб.
+          </div>
+          <a href="#" class="catalog-item__btn-add-item btn">ЗАКАЗАТЬ</a>
+          <div class="catalog-item__form-add-item hidden">
+            <form class="form-add-item" action="https://echo.htmlacademy.ru/" method="post">
+            <h2>Добавить в корзину</h2>
+              <fieldset>
+                <legend>Выберите размер:</legend>
+                <label><input type="radio" class="form-add-item_size" name="item-size" value="s">s</label>
+                <label><input type="radio" class="form-add-item__size" name="item-size" value="m">m</label>
+                <label><input type="radio" class="form-add-item__size" name="item-size" value="l">l</label>
+                <br>
+                <button class="form-add-item__btn btn">Добавить</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="features">
+        <h2 class="features__title">Коротко о нас:</h2>
+        <ul class="features__list">
+          <li class="features__item">Экологически чистые материалы</li>
+          <li class="features__item">Скандинавский стиль по российской цене</li>
+          <li class="features__item">Увеличивает лайки на фотографиях</li>
+          <li class="features__item">Связано вручную с любовью и умилением</li>
+          <li class="features__item">Поддержка отечественного производителя</li>
+          <li class="features__item">Поставляется в подарочной упаковке</li>
+        </ul>
+      </div>
+      <div class="feedbacks">
+        <h2>Отзывы</h2>
+        <div class="feedbacks__items">
+        <blockquote class="feedbacks__item">
+          <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <cite>Анастасия Красильникова @misssssiskras</cite>
+        </blockquote>
+        <div class="feedbacks__left-arrow"></div>
+        <div class="feedbacks__right-arrow"></div>.
+        <a href="#" class="feedbacks__btn btn">Написать</a>
+      </div>
+    </div>
+      <div class="contacts">
+        <h2>Контакты</h2>
+          <table class="contacts-table">
+            <tr>
+              <td class="contacts-table__attr">e-mail:</td>
+              <td class="contacts-table__value"><a>info@mimimishkashop.ru</a></td>
+            </tr>
+            <tr>
+              <td class="contacts-table__attr">адрес:</td>
+              <td class="contacts-table__value">г. Санкт-Петербург,<br>
+                  ул. Большая Конюшенная,<br>
+                  д. 19/8, офис 101</td>
+            </tr>
+          </table>
+        <div class="contacts__map">
+          <img src="http://placehold.it/770x457" alt="map">
+        </div>
+        <a href="#" class="contacts__btn btn">Напишите нам</a>
+      </div>
+    </main>
+    <footer class="footer-bottom">
+      <div class="footer-bottom__social">
+        <a href="#">insta</a>
+        <a href="#">fb</a>
+        <a href="#">tw</a>
+      </div>
+      <div class="footer-bottom__copyright">
+        Разработано <a href="https://htmlacademy.ru">Academy-logo</a>
+      </div>
+    </footer>
   </body>
 </html>
