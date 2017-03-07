@@ -6,20 +6,24 @@
     <title>MISHKA - Каталог товаров</title>
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo"><a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="logo"></a></div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle"></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
+    <div class="top-bar">
+      <div class="top-bar__logo">
+        <a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="logo"></a>
+      </div>
+      <nav class="top-bar-nav">
+        <button class="top-bar-nav__toggle"></button>
+        <div class="top-bar-nav__wrapper">
+          <ul class="top-bar-nav__list">
+            <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
+            <li class="top-bar-nav__item"><a href="#">Поиск по сайту</a></li>
+            <li class="top-bar-nav__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
         </div>
-        <h1 class="catalog__title">Каталог товаров</h1>
       </nav>
+    </div>
+    <header class="page-header">
+        <h1 class="page-header__title">Каталог товаров</h1>
     </header>
     <main>
       <section class="catalog">
@@ -44,18 +48,6 @@
           <p class="catalog__item-price"><b>1 500 руб.</b></p>
           <a class="catalog__basket" href="#popup">basket</a>
         </div>
-        <div class="popup hidden">
-          <form class="popup-form" action="https://echo.htmlacademy.ru/" method="post">
-            <h2 class="popup-form__title">Добавить в корзину</h2>
-            <fieldset class="popup-form__field">
-              <legend>Выберите размер:</legend>
-              <label><input class="popup-form__item-size" type="radio" name="item-size" value="s" checked>s</label>
-              <label><input class="popup-form__item-size" type="radio" name="item-size" value="m">m</label>
-              <label><input class="popup-form__item-size" type="radio" name="item-size" value="l">l</label><br>
-              <button class="popup-form__btn btn">Добавить</button>
-            </fieldset>
-          </form>
-        </div>
       </section>
       <section class="promo">
         <h2 class="promo__title">Процесс производства</h2>
@@ -74,5 +66,18 @@
         Разработано <a href="https://htmlacademy.ru">Academy-logo</a>
       </div>
     </footer>
+    <div class="popup">
+      <form class="popup-form" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="popup-form__title">Добавить в корзину</h2>
+        <fieldset class="popup-form__field">
+          <legend>Выберите размер:</legend>
+          <label><input class="popup-form__item-size" type="radio" name="item-size" value="s" checked>s</label>
+          <label><input class="popup-form__item-size" type="radio" name="item-size" value="m">m</label>
+          <label><input class="popup-form__item-size" type="radio" name="item-size" value="l">l</label>
+          <br>
+          <button class="popup-form__btn btn">Добавить</button>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>
