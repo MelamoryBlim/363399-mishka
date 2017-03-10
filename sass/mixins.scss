@@ -1,0 +1,15 @@
+@mixin clear-arrow() {
+  text-decoration: none;
+}
+
+@mixin clear-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin bg-picture() {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
