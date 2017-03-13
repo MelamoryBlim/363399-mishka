@@ -1,0 +1,28 @@
+.feedbacks {
+
+  &__title {
+    font-weight: bold;
+    line-height: 30px;
+  }
+  &__item cite {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  &__arrow {
+    display: inline-block;
+    width: 50%;
+    height: 50px;
+    border: 1px solid $shadow;
+  }
+  &__arrow--right {
+    background-image: url("../img/icon-right-arrow.svg");
+    @include bg-picture;
+    background-size: 50px 28px;
+  }
+  &__arrow--left {
+    background-image: url("../img/icon-left-arrow.svg");
+    @include bg-picture;
+    background-size: 50px 28px;
+  }
+}

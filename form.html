@@ -2,13 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="css/style.css">
     <title>MISHKA - форма заказа</title>
   </head>
   <body>
     <div class="top-bar">
       <div class="top-bar__logo">
-        <a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="logo"></a>
+        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
       </div>
       <nav class="top-bar-nav">
         <button class="top-bar-nav__toggle"></button>
@@ -16,8 +16,8 @@
           <ul class="top-bar-nav__list">
             <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
-            <li class="top-bar-nav__item"><a href="#">Поиск по сайту</a></li>
-            <li class="top-bar-nav__item"><a href="#">Корзина: пока пуста</a></li>
+            <li class="top-bar-nav__item top-bar-nav__item--search"><a href="#">Поиск по сайту</a></li>
+            <li class="top-bar-nav__item top-bar-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
           </ul>
         </div>
       </nav>
@@ -32,39 +32,39 @@
           <fieldset class="order__form-field order__form-field--type">
             <legend>Тип</legend>
             <label>
-              <span class="order__form-label">Аксессуар для интерьера</span>
               <input type="radio" name="type" value="Аксессуар для интерьера" checked>
+              <span class="order__form-label order__form-label--round">Аксессуар для интерьера</span>
             </label>
             <label>
-              <span class="order__form-label">Детская игрушка</span>
               <input type="radio" name="type" value="Детская игрушка">
+              <span class="order__form-label order__form-label--round">Детская игрушка</span>
             </label>
           </fieldset>
           <fieldset class="order__form-field order__form-field--color">
             <legend>Цвет</legend>
             <label>
-              <span class="order__form-label">Белый</span>
               <input type="checkbox" name="color" value="Белый" checked>
+              <span class="order__form-label order__form-label--box">Белый</span>
             </label>
             <label>
-              <span class="order__form-label">Серый</span>
               <input type="checkbox" name="color" value="Серый" checked>
+              <span class="order__form-label order__form-label--box">Серый</span>
             </label>
             <label>
-              <span class="order__form-label">«Тиффани»</span>
               <input type="checkbox" name="color" value="«Тиффани»">
+              <span class="order__form-label order__form-label--box">«Тиффани»</span>
             </label>
             <label>
-              <span class="order__form-label">Черный</span>
               <input type="checkbox" name="color" value="Черный">
+              <span class="order__form-label order__form-label--box">Черный</span>
             </label>
             <label>
-              <span class="order__form-label">Розовый</span>
               <input type="checkbox" name="color" value="Розовый">
+              <span class="order__form-label order__form-label--box">Розовый</span>
             </label>
             <label>
-              <span class="order__form-label">Оранжевый</span>
               <input type="checkbox" name="color" value="Оранжевый">
+              <span class="order__form-label order__form-label--box">Оранжевый</span>
             </label>
           </fieldset>
           <fieldset class="order__form-field order__form-field--name">
@@ -107,12 +107,12 @@
     </main>
     <footer class="footer-bottom">
       <div class="footer-bottom__social">
-        <a href="#">insta</a>
-        <a href="#">fb</a>
-        <a href="#">tw</a>
+        <a class="footer-bottom__social--insta" href="#"></a>
+        <a class="footer-bottom__social--fb" href="#"></a>
+        <a class="footer-bottom__social--tw" href="#"></a>
       </div>
       <div class="footer-bottom__copyright">
-        Разработано <a href="https://htmlacademy.ru">Academy-logo</a>
+        Разработано <a class="footer-bottom__copyright-logo" href="https://htmlacademy.ru"></a>
       </div>
     </footer>
   </body>

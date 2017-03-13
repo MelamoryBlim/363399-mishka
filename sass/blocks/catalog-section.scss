@@ -1,0 +1,22 @@
+.catalog-section {
+  &__buttons {
+    @include clear-list;
+  }
+  &__btn a {
+    @include clear-arrow;
+    display: block;
+    color: white;
+    height: 105px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  &__btn--light {
+    background-color: $light-btn-color;
+  }
+  &__btn--dark {
+    background-color: $dark-btn-color;
+  }
+}

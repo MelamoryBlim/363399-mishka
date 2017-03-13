@@ -1,0 +1,18 @@
+.contacts {
+
+  &__title {
+
+  }
+  &__table {
+    color: $ghost-btn-color;
+    font-size: 15px;
+    line-height: 30px;
+  }
+  &__table-value a {
+    text-decoration: none;
+    color: $ghost-btn-color;
+  }
+  &__table-attr {
+    padding-right: 20px;
+  }
+}

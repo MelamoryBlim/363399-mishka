@@ -1,0 +1,66 @@
+.order {
+  &__greeting {
+    font-size: 13px;
+    line-height: 24px;
+    text-align: left;
+  }
+  &__form {
+
+  }
+  &__form legend {
+    text-transform: uppercase;
+    color: $light-btn-color;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  &__form-field {
+    border: none;
+    border-top: 1px solid $light-btn-color;
+    padding: 10px 0;
+  }
+  &__form-field--type input,
+  &__form-field--color input {
+    display: none;
+  }
+  &__form-label {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  &__form-label--round::before,
+  &__form-label--box::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 35px;
+    border: 2px solid $ghost-btn-color;
+  }
+  &__form-label--round::before {
+    border-radius: 50%;
+  }
+  & input:checked + &__form-label--round::before {
+    background-color: $select-color;
+    box-shadow: inset 0 0 0 10px white;
+  }
+  & input:checked + &__form-label--box::before {
+    background-image: url("../img/icon-tick.svg");
+    @include bg-picture;
+    background-size: 22px 16px;
+  }
+  &__form-field--name input,
+  &__form-field--phone input,
+  &__form-field--email input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $text-color-black;
+    color: $ghost-btn-color;
+    font-size: 17px;
+    font-family: inherit;
+  }
+  &__form-field--add-info textarea {
+    border: 2px solid $ghost-btn-color-opacity;
+    color: $ghost-btn-color;
+    font-size: 17px;
+    font-family: inherit;
+  }
+}
