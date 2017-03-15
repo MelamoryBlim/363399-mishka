@@ -1,30 +1,37 @@
 .popup-form {
   text-align: center;
-  &__title {
-    text-transform: uppercase;
-    text-align: center;
-  }
-  &__field {
-    border: none;
-  }
-  &__field legend {
-    color: $ghost-btn-color;
-    margin: auto;
-  }
-  &__item-size span {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 17px;
-    padding: 16px 32px;
-    border: 2px solid $shadow;
-  }
-  &__item-size input {
-    display: none;
-  }
-  &__item-size input:checked + span {
-    border-color: $light-btn-color;
-  }
-  &__btn {
+}
 
-  }
+.popup-form__title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.popup-form__field {
+  border: none;
+}
+
+.popup-form__field legend {
+  color: $ghost-btn-color;
+  margin: auto;
+}
+
+.popup-form__item-size span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 32px;
+  border: 2px solid $shadow;
+}
+
+.popup-form__item-size input {
+  display: none;
+}
+
+.popup-form__item-size input:checked + span {
+  border-color: $light-btn-color;
+}
+
+.popup-form__btn {
+  margin-top: 35px;
 }

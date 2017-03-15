@@ -1,16 +1,106 @@
 .promo {
+  @include container;
   border: 1px solid $shadow;
+  box-sizing: border-box;
   width: 260px;
+  padding: 0 30px 30px 30px;
+}
 
-  &__title {
+.promo__title {
+  margin-left: 34px;
+  font-size: 17px;
+  line-height: 24px;
 
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 23px;
+    margin-right: 25px;
+    background-image: url("../img/icon-video.svg");
+    @include bg-picture;
   }
-  &__desc {
-    font-size: 13px;
+
+}
+
+.promo__video {
+  width: 260px;
+  height: 150px;
+}
+
+.promo__desc {
+  margin: 30px auto;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: left;
+  color: $ghost-btn-color;
+}
+
+.promo__btn {
+  margin: 0 auto;
+}
+
+@media #{$tablet-width} {
+
+  .promo {
+    padding: 0;
+    padding-bottom: 45px;
+    position: relative;
+  }
+
+  .promo__title {
+    margin-top: 490px;
+    font-size: 20px;
     line-height: 24px;
-    text-align: left;
   }
-  &__btn {
 
+  .promo__desc {
+    width: 584px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .promo__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 453px; //временная разметка
+    border: 1px solid $shadow; //временная разметка
+  }
+
+  .promo__btn {
+    width: 584px;
+  }
+
+}
+@media #{$desktop-width} {
+
+  .promo__video {
+    width: 680px;
+    height: 455px;
+  }
+
+  .promo__title {
+    width: 225px;
+    margin: 40px 40px 40px auto;
+
+    &::before {
+      display: block;
+      margin-bottom: 25px;
+    }
+
+  }
+
+  .promo__desc {
+    width: 225px;
+    margin: 0 40px 50px auto;
+  }
+
+  .promo__btn {
+    width: 230px;
+    margin-right: 40px;
   }
 }

@@ -4,21 +4,30 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <title>MISHKA - милые штуки ручной работы для дома</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
   </head>
   <body>
     <div class="top-bar">
-      <div class="top-bar__logo"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></div>
-      <nav class="top-bar-nav">
-        <button class="top-bar-nav__toggle"></button>
-        <div class="top-bar-nav__wrapper">
+      <div class="top-bar__wrapper">
+        <div class="top-bar__logo"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></div>
+        <button class="top-bar-nav__toggle"><i class="vusually-hidden">Открыть меню</i></button>
+      </div>
+      <nav class="top-bar-nav top-bar-nav--closed top-bar-nav--nojs">
           <ul class="top-bar-nav__list">
             <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
-            <li class="top-bar-nav__item top-bar-nav__item--search"><a href="#">Поиск по сайту</a></li>
-            <li class="top-bar-nav__item top-bar-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
           </ul>
-        </div>
+          <ul class="top-bar-nav__user-list">
+            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-search" href="#">Поиск по сайту</a></li>
+            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-basket" href="#">Корзина: пока пуста</a></li>
+          </ul>
+          <ul class="top-bar-nav__feature-list">
+            <li class="top-bar-nav__feature-item"><a href="#">Новые поступления</a></li>
+            <li class="top-bar-nav__feature-item"><a href="#">Распродажа</a></li>
+          </ul>
       </nav>
+      <p class="top-bar__feature">Бесплатная доставка по России</p>
     </div>
     <header class="page-header page-header--pic">
       <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
@@ -92,7 +101,7 @@
           </tr>
           <tr>
             <td class="contacts__table-attr">адрес:</td>
-            <td class="contacts__table-value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+            <td class="contacts__table-value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
           </tr>
         </table>
         <div class="contacts__map">
@@ -104,13 +113,18 @@
       </section>
     </main>
     <footer class="footer-bottom">
-      <div class="footer-bottom__social">
-        <a class="footer-bottom__social--insta" href="#"></a>
-        <a class="footer-bottom__social--fb" href="#"></a>
-        <a class="footer-bottom__social--tw" href="#"></a>
-      </div>
-      <div class="footer-bottom__copyright">
-        Разработано <a class="footer-bottom__copyright-logo" href="https://htmlacademy.ru"></a>
+      <div class="footer-bottom--wrapper">
+        <div class="footer-bottom__logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+        </div>
+        <div class="footer-bottom__social">
+          <a class="footer-bottom__social--insta" href="#"></a>
+          <a class="footer-bottom__social--fb" href="#"></a>
+          <a class="footer-bottom__social--tw" href="#"></a>
+        </div>
+        <div class="footer-bottom__copyright">
+          Разработано <a class="footer-bottom__copyright-logo" href="https://htmlacademy.ru"></a>
+        </div>
       </div>
     </footer>
     <div class="popup">
