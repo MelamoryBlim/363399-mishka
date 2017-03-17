@@ -7,20 +7,25 @@
   </head>
   <body>
     <div class="top-bar">
-      <div class="top-bar__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
+      <div class="top-bar__wrapper">
+        <div class="top-bar__logo"><a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></a></div>
+        <button class="top-bar-nav__toggle"><i class="vusually-hidden">Открыть меню</i></button>
       </div>
-      <nav class="top-bar-nav">
-        <button class="top-bar-nav__toggle"></button>
-        <div class="top-bar-nav__wrapper">
+      <nav class="top-bar-nav top-bar-nav--closed top-bar-nav--nojs">
           <ul class="top-bar-nav__list">
             <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
-            <li class="top-bar-nav__item top-bar-nav__item--search"><a href="#">Поиск по сайту</a></li>
-            <li class="top-bar-nav__item top-bar-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
           </ul>
-        </div>
+          <ul class="top-bar-nav__user-list">
+            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-search" href="#">Поиск по сайту</a></li>
+            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-basket" href="#">Корзина: пока пуста</a></li>
+          </ul>
+          <ul class="top-bar-nav__feature-list">
+            <li class="top-bar-nav__feature-item"><a href="#">Новые поступления</a></li>
+            <li class="top-bar-nav__feature-item"><a href="#">Распродажа</a></li>
+          </ul>
       </nav>
+      <p class="top-bar__feature">Бесплатная доставка по России</p>
     </div>
     <header class="page-header">
       <h1 class="page-header__title">Вязание на заказ</h1>
@@ -31,54 +36,54 @@
         <form class="order__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="order__form-field order__form-field--type">
             <legend>Тип</legend>
-            <label>
+            <label class="order__form-label">
               <input type="radio" name="type" value="Аксессуар для интерьера" checked>
-              <span class="order__form-label order__form-label--round">Аксессуар для интерьера</span>
+              <span class="order__form-label--round">Аксессуар для интерьера</span>
             </label>
-            <label>
+            <label class="order__form-label">
               <input type="radio" name="type" value="Детская игрушка">
-              <span class="order__form-label order__form-label--round">Детская игрушка</span>
+              <span class="order__form-label--round">Детская игрушка</span>
             </label>
           </fieldset>
           <fieldset class="order__form-field order__form-field--color">
             <legend>Цвет</legend>
-            <label>
+            <label class="order__form-label">
               <input type="checkbox" name="color" value="Белый" checked>
-              <span class="order__form-label order__form-label--box">Белый</span>
+              <span class="order__form-label--box">Белый</span>
             </label>
-            <label>
+            <label class="order__form-label">
               <input type="checkbox" name="color" value="Серый" checked>
-              <span class="order__form-label order__form-label--box">Серый</span>
+              <span class="order__form-label--box">Серый</span>
             </label>
-            <label>
+            <label class="order__form-label">
               <input type="checkbox" name="color" value="«Тиффани»">
-              <span class="order__form-label order__form-label--box">«Тиффани»</span>
+              <span class="order__form-label--box">«Тиффани»</span>
             </label>
-            <label>
+            <label class="order__form-label">
               <input type="checkbox" name="color" value="Черный">
-              <span class="order__form-label order__form-label--box">Черный</span>
+              <span class="order__form-label--box">Черный</span>
             </label>
-            <label>
+            <label class="order__form-label">
               <input type="checkbox" name="color" value="Розовый">
-              <span class="order__form-label order__form-label--box">Розовый</span>
+              <span class="order__form-label--box">Розовый</span>
             </label>
-            <label>
+            <label class="order__form-label">
               <input type="checkbox" name="color" value="Оранжевый">
-              <span class="order__form-label order__form-label--box">Оранжевый</span>
+              <span class="order__form-label--box">Оранжевый</span>
             </label>
           </fieldset>
           <fieldset class="order__form-field order__form-field--name">
             <legend>ФИО</legend>
-            <label>
-              <span class="order__form-label">Имя</span>
+            <label class="order__form-label">
+              <span class="order__form-label--name">Имя</span>
               <input type="text" name="name" placeholder="Введите ваше имя*" required>
             </label>
-            <label>
-              <span class="order__form-label">Фамилия</span>
+            <label class="order__form-label">
+              <span class="order__form-label--name">Фамилия</span>
               <input type="text" name="surname" placeholder="Укажите фамилию*" required>
             </label>
-            <label>
-              <span class="order__form-label">Отчество</span>
+            <label class="order__form-label">
+              <span class="order__form-label--name">Отчество</span>
               <input type="text" name="last-name" placeholder="Отчество, если желаете">
             </label>
           </fieldset>
@@ -106,13 +111,18 @@
       </div>
     </main>
     <footer class="footer-bottom">
-      <div class="footer-bottom__social">
-        <a class="footer-bottom__social--insta" href="#"></a>
-        <a class="footer-bottom__social--fb" href="#"></a>
-        <a class="footer-bottom__social--tw" href="#"></a>
-      </div>
-      <div class="footer-bottom__copyright">
-        Разработано <a class="footer-bottom__copyright-logo" href="https://htmlacademy.ru"></a>
+      <div class="footer-bottom--wrapper">
+        <div class="footer-bottom__logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+        </div>
+        <div class="footer-bottom__social">
+          <a class="footer-bottom__social--insta" href="#"></a>
+          <a class="footer-bottom__social--fb" href="#"></a>
+          <a class="footer-bottom__social--tw" href="#"></a>
+        </div>
+        <div class="footer-bottom__copyright">
+          Разработано <a class="footer-bottom__copyright-logo" href="https://htmlacademy.ru"></a>
+        </div>
       </div>
     </footer>
   </body>

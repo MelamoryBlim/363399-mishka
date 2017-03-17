@@ -7,63 +7,89 @@
   </head>
   <body>
     <div class="top-bar">
-      <div class="top-bar__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
+      <div class="top-bar__wrapper">
+        <div class="top-bar__logo"><a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></a></div>
+        <button class="top-bar-nav__toggle"><i class="vusually-hidden">Открыть меню</i></button>
       </div>
-      <nav class="top-bar-nav">
-        <button class="top-bar-nav__toggle"></button>
-        <div class="top-bar-nav__wrapper">
+      <nav class="top-bar-nav top-bar-nav--closed top-bar-nav--nojs">
           <ul class="top-bar-nav__list">
             <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
-            <li class="top-bar-nav__item top-bar-nav__item--search"><a href="#">Поиск по сайту</a></li>
-            <li class="top-bar-nav__item top-bar-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
           </ul>
-        </div>
+          <ul class="top-bar-nav__user-list">
+            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-search" href="#">Поиск по сайту</a></li>
+            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-basket" href="#">Корзина: пока пуста</a></li>
+          </ul>
+          <ul class="top-bar-nav__feature-list">
+            <li class="top-bar-nav__feature-item"><a href="#">Новые поступления</a></li>
+            <li class="top-bar-nav__feature-item"><a href="#">Распродажа</a></li>
+          </ul>
       </nav>
+      <p class="top-bar__feature">Бесплатная доставка по России</p>
     </div>
     <header class="page-header">
         <h1 class="page-header__title">Каталог товаров</h1>
     </header>
     <main>
       <section class="catalog">
-        <div class="catalog__item">
-          <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="toy">
-          <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
-          <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
-          <p class="catalog__item-price"><b>1 200 руб.</b></p>
-          <a class="catalog__basket" href="#popup">basket</a>
-        </div>
-        <div class="catalog__item">
-          <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="basket">
-          <h3 class="catalog__item-title">Корзинка для белья</h3>
-          <p class="catalog__item-desc">Диаметр 15 см, высота 10см</p>
-          <p class="catalog__item-price"><b>690 руб.</b></p>
-          <a class="catalog__basket" href="#popup">basket</a>
-        </div>
-        <div class="catalog__item">
-          <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="big-basket">
-          <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
-          <p class="catalog__item-desc">Диаметр 30 см, высота 30см</p>
-          <p class="catalog__item-price"><b>1 500 руб.</b></p>
-          <a class="catalog__basket" href="#popup">basket</a>
+        <div class="catalog__items">
+          <div class="catalog__item">
+            <div class="catalog__item-pic">
+              <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="toy">
+            </div>
+            <div class="catalog__item--wrapper">
+              <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+              <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
+              <b class="catalog__item-price">1 200 руб.</b>
+              <a class="catalog__basket" href="#popup"></a>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-pic">
+              <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="basket">
+            </div>
+            <div class="catalog__item--wrapper">
+              <h3 class="catalog__item-title">Корзинка для белья</h3>
+              <p class="catalog__item-desc">Диаметр 15 см, высота 10см</p>
+              <b class="catalog__item-price">690 руб.</b>
+              <a class="catalog__basket" href="#popup"></a>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-pic">
+              <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="big-basket">
+            </div>
+            <div class="catalog__item--wrapper">
+              <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
+              <p class="catalog__item-desc">Диаметр 30 см, высота 30см</p>
+              <b class="catalog__item-price">1 500 руб.</b>
+              <a class="catalog__basket" href="#popup"></a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="promo">
         <h2 class="promo__title">Процесс производства</h2>
-        <video controls poster="img/video-mobile@1x.jpg" width="260" height="150"><source src="#"></video>
+        <div class="promo__video">
+          <video controls poster="img/video-mobile@1x.jpg" width="260" height="150"><source src="#"></video>
+        </div>
         <p class="promo__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары</p>
         <a class="promo__btn btn" href="form.html">Сделать заказ</a>
       </section>
     </main>
     <footer class="footer-bottom">
-      <div class="footer-bottom__socials">
-        <a class="footer-bottom__social--insta" href="#"></a>
-        <a class="footer-bottom__social--fb" href="#"></a>
-        <a class="footer-bottom__social--tw" href="#"></a>
-      </div>
-      <div class="footer-bottom__copyright">
-        Разработано <a class="footer-bottom__copyright-logo" href="https://htmlacademy.ru"></a>
+      <div class="footer-bottom--wrapper">
+        <div class="footer-bottom__logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+        </div>
+        <div class="footer-bottom__social">
+          <a class="footer-bottom__social--insta" href="#"></a>
+          <a class="footer-bottom__social--fb" href="#"></a>
+          <a class="footer-bottom__social--tw" href="#"></a>
+        </div>
+        <div class="footer-bottom__copyright">
+          Разработано <a class="footer-bottom__copyright-logo" href="https://htmlacademy.ru"></a>
+        </div>
       </div>
     </footer>
     <div class="popup">

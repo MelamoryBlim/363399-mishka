@@ -1,66 +1,241 @@
 .order {
-  &__greeting {
-    font-size: 13px;
-    line-height: 24px;
-    text-align: left;
-  }
-  &__form {
+  @include container;
+  margin-top: -40px;
+  position: relative;
 
-  }
-  &__form legend {
-    text-transform: uppercase;
-    color: $light-btn-color;
-    font-size: 17px;
-    font-weight: bold;
-  }
-  &__form-field {
-    border: none;
-    border-top: 1px solid $light-btn-color;
-    padding: 10px 0;
-  }
-  &__form-field--type input,
-  &__form-field--color input {
-    display: none;
-  }
-  &__form-label {
-    font-size: 17px;
-    font-weight: bold;
-  }
-  &__form-label--round::before,
-  &__form-label--box::before {
+  &::before {
     content: "";
     display: block;
-    width: 36px;
-    height: 35px;
-    border: 2px solid $ghost-btn-color;
-  }
-  &__form-label--round::before {
-    border-radius: 50%;
-  }
-  & input:checked + &__form-label--round::before {
-    background-color: $select-color;
-    box-shadow: inset 0 0 0 10px white;
-  }
-  & input:checked + &__form-label--box::before {
-    background-image: url("../img/icon-tick.svg");
-    @include bg-picture;
-    background-size: 22px 16px;
-  }
-  &__form-field--name input,
-  &__form-field--phone input,
-  &__form-field--email input {
-    display: block;
+    position: relative;
     width: 100%;
+    height: 40px;
+    z-index: 10;
+    background-image: radial-gradient(circle at 10px 0, transparent 12px, white 13px),
+                      radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+    background-position: left bottom,
+                         left bottom;
+    background-size: 20px 20px,
+                     40px 20px;
+    background-repeat: repeat-x;
+  }
+
+}
+
+.order__greeting {
+  font-size: 13px;
+  line-height: 24px;
+  text-align: left;
+  padding: 0 30px;
+  color: $ghost-btn-color;
+}
+
+.order__form {
+  margin: 20px 30px;
+}
+
+.order__form legend {
+  margin-top: 20px;
+  padding-right: 25px;
+  text-transform: uppercase;
+  color: $light-btn-color;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.order__form-field {
+  border: none;
+  border-top: 1px solid $light-btn-color;
+  padding: 10px 0;
+}
+
+.order__form-field--type input,
+.order__form-field--color input {
+  display: none;
+}
+
+.order__form-label {
+  display: block;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.order__form-label--round,
+.order__form-label--box {
+  display: block;
+  width: 260px;
+  min-height: 39px;
+}
+
+.order__form-label--round::before,
+.order__form-label--box::before {
+  content: "";
+  display: block;
+  float: left;
+  width: 36px;
+  height: 35px;
+  margin-right: 24px;
+  border: 2px solid $ghost-btn-color;
+}
+
+.order__form-label--round::before {
+  border-radius: 50%;
+}
+
+.order input:checked + .order__form-label--round::before {
+  background-color: $select-color;
+  box-shadow: inset 0 0 0 10px white;
+}
+
+.order input:checked + .order__form-label--box::before {
+  background-image: url("../img/icon-tick.svg");
+  @include bg-picture;
+  background-size: 22px 16px;
+}
+
+.order__form-field--name input,
+.order__form-field--phone input,
+.order__form-field--email input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid $text-color-black;
+  background-color: inherit;
+  color: $ghost-btn-color;
+  font-size: 17px;
+  font-family: inherit;
+  line-height: 40px;
+}
+
+.order__form-field--add-info textarea {
+  width: 100%;
+  min-width: 260px;
+  border: 2px solid $ghost-btn-color;
+  color: $ghost-btn-color-opacity;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+@media #{$tablet-width} {
+
+  .order__form {
+    margin: 0;
+    @include clearfix;
+  }
+
+  .order__greeting {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order__form-field {
     border: none;
-    border-bottom: 2px solid $text-color-black;
-    color: $ghost-btn-color;
-    font-size: 17px;
-    font-family: inherit;
+    padding: 40px 0;
   }
-  &__form-field--add-info textarea {
-    border: 2px solid $ghost-btn-color-opacity;
-    color: $ghost-btn-color;
-    font-size: 17px;
-    font-family: inherit;
+
+  .order__form legend {
+    display: block;
+    box-sizing: border-box;
+    width: 165px;
+    float: left;
+    margin: 0;
   }
+
+  .order__form-label {
+    display: block;
+    box-sizing: border-box;
+    width: 495px;
+    float: right;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  .order__form-field--color label {
+    width: 230px;
+    display: inline-block;
+    columns: 230px 2;
+  }
+
+  .order__form-label--name {
+    float: left;
+    margin-right: 20px;
+    line-height: 40px;
+  }
+
+  .order__form-field--name input {
+    float: left;
+    width: 370px;
+  }
+
+  .order__form-field--phone input,
+  .order__form-field--email input {
+    width: 495px;
+  }
+
+  .order__form-field--phone legend,
+  .order__form-field--email legend,
+  .order__form-field--add-info legend {
+    line-height: 40px;
+  }
+
+  .order__form-field--add-info textarea {
+    width: 491px;
+    float: right;
+    margin-bottom: 55px;
+  }
+
+  .order__form-field--add-info p {
+    float: right;
+  }
+
+  .order__form-field--color,
+  .order__form-field--phone,
+  .order__form-field--email {
+    background-color: $bg-color;
+  }
+
+  .order__btn {
+    width: 230px;
+    float: left;
+  }
+
+}
+
+@media #{$desktop-width} {
+
+  .order__form {
+    padding-right: 175px;
+  }
+
+  .order__form legend {
+    width: 175px;
+    text-align: center;
+  }
+
+  .order__form-label{
+    width: 695px;
+  }
+
+  .order__form-field--color label {
+    columns: 200px 3;
+  }
+
+  .order__form-field--add-info textarea {
+    width: 690px;
+  }
+
+  .order__form-field--name input {
+    width: 580px;
+  }
+
+  .order__form-field--phone input,
+  .order__form-field--email input {
+    width: 695px;
+  }
+
+  .order__btn {
+    margin-left: 175px;
+  }
+
 }

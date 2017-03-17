@@ -1,22 +1,85 @@
 .catalog-section {
-  &__buttons {
-    @include clear-list;
-  }
-  &__btn a {
+  margin-top: -72px;
+}
+
+.catalog-section__buttons {
+  @include clear-list;
+}
+
+.catalog-section__btn {
+  padding: 0 30px;
+
+  & a {
     @include clear-arrow;
     display: block;
     color: white;
-    height: 105px;
     font-size: 19px;
     font-weight: bold;
     line-height: 24px;
     text-align: left;
     vertical-align: middle;
+    padding: 40px 0;
   }
-  &__btn--light {
-    background-color: $light-btn-color;
+
+}
+
+.catalog-section__btn--light {
+  background-color: $light-btn-color;
+  & a {
+    background-image: url("../img/icon-interior.svg");
+    background-size: 41px 62px;
+    background-position: right center;
+    background-repeat: no-repeat;
   }
-  &__btn--dark {
-    background-color: $dark-btn-color;
+
+}
+
+.catalog-section__btn--dark {
+  background-color: $dark-btn-color;
+  & a {
+    background-image: url("../img/icon-toy.svg");
+    background-size: 61px 61px;
+    background-position: right center;
+    background-repeat: no-repeat;
   }
+
+}
+
+@media #{$tablet-width} {
+
+  .catalog-section {
+    @include container;
+    z-index: 1;
+  }
+
+  .catalog-section__buttons {
+    @include clearfix;
+  }
+
+  .catalog-section__btn {
+  margin: 0;
+  display: inline-block;
+  width: 274px;
+  & a {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 45px 0;
+    }
+  }
+
+  .catalog-section__btn--light {
+    float: left;
+  }
+
+  .catalog-section__btn--dark {
+    float: right;
+  }
+}
+
+@media #{$desktop-width} {
+
+  .catalog-section__btn {
+    width: 465px;
+  }
+
 }
