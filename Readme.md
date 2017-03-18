@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Alexandra Kudryavtseva](https://up.htmlacademy.ru/adaptive/10/user/363399).
-* Наставник: [Иван Рыбников](https://htmlacademy.ru/profile/id373011).
+* Наставник: [Иван Рыбников] (https://htmlacademy.ru/profile/id373011).
 
 ---
 
