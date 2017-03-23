@@ -29,6 +29,22 @@
   }
 }
 
+@mixin container-fluid {
+  min-width: 260px;
+  width: 81%;
+  margin: 0 auto;
+
+  @media #{$tablet-width} {
+    min-width: 668px;
+    width: 87%;
+  }
+
+  @media #{$desktop-width} {
+    min-width: 1050px;
+    width: 91%;
+  }
+}
+
 @mixin bg-picture() {
   background-repeat: no-repeat;
   background-size: cover;
