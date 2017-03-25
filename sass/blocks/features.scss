@@ -1,6 +1,4 @@
 .features {
-  @include container;
-  padding: 0 30px;
   position: relative;
   &::before {
     content: "";
@@ -26,21 +24,24 @@
 }
 
 .features__title {
+  font-size: 25px;
+  line-height: 30px;
   text-align: left;
-  padding-left: 30px;
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   @include clear-list;
 }
 
 .features__item {
-  margin: 0 auto;
   padding: 17px 0;
-  width: 260px;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
+
   &::before {
     content: "";
     display: block;
@@ -79,34 +80,58 @@
   }
 
   .features__list {
-    columns: 334px 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .features__item {
     margin: 0;
-    width: 332px;
-    display: inline-block;
     box-sizing: border-box;
-    padding-right: 50px;
+    flex-basis: 332px;
     font-size: 20px;
     line-height: 22px;
   }
 
+  .features__item--eco {
+    order: 1;
+    padding-right: 30px;
+  }
+  .features__item--scandic {
+    order: 3;
+    padding-right: 30px;
+  }
+  .features__item--like {
+    order: 5;
+    padding-right: 30px;
+  }
+  .features__item--hand {
+    order: 2;
+  }
+  .features__item--support {
+    order: 4;
+  }
+  .features__item--gift {
+    order: 6;
+  }
 }
 
 @media #{$desktop-width} {
 
   .features__title {
+    margin-left: 175px;
     font-size: 53px;
     line-height: 57px;
   }
 
   .features__list {
     padding-left: 175px;
+    padding-right: 175px;
   }
 
   .features__item {
-    width: 350px;
+    flex-basis: 350px;
   }
 
 }

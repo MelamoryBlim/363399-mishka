@@ -4,26 +4,30 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <title>MISHKA - Каталог товаров</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
   </head>
   <body>
-    <div class="top-bar">
-      <div class="top-bar__wrapper">
-        <div class="top-bar__logo"><a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></a></div>
-        <button class="top-bar-nav__toggle"><i class="vusually-hidden">Открыть меню</i></button>
-      </div>
-      <nav class="top-bar-nav top-bar-nav--closed top-bar-nav--nojs">
-          <ul class="top-bar-nav__list">
-            <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
-          </ul>
-          <ul class="top-bar-nav__user-list">
-            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-search" href="#">Поиск по сайту</a></li>
-            <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-basket" href="#">Корзина: пока пуста</a></li>
-          </ul>
-          <ul class="top-bar-nav__feature-list">
-            <li class="top-bar-nav__feature-item"><a href="#">Новые поступления</a></li>
-            <li class="top-bar-nav__feature-item"><a href="#">Распродажа</a></li>
-          </ul>
+    <div class="top-bar top-bar-nav--closed">
+      <div class="top-bar__logo"><a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></a></div>
+      <button class="top-bar-nav__toggle">Открыть меню</button>
+      <nav class="top-bar__main-nav">
+        <ul class="top-bar-nav__list">
+          <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
+        </ul>
+      </nav>
+      <nav class="top-bar__user-nav">
+        <ul class="top-bar-nav__user-list">
+          <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-search" href="#">Поиск по сайту</a></li>
+          <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-basket" href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+      <nav class="top-bar__feature-nav top-bar-nav--closed">
+        <ul class="top-bar-nav__feature-list">
+          <li class="top-bar-nav__feature-item"><a href="#">Новые поступления</a></li>
+          <li class="top-bar-nav__feature-item"><a href="#">Распродажа</a></li>
+        </ul>
       </nav>
       <p class="top-bar__feature">Бесплатная доставка по России</p>
     </div>
@@ -37,33 +41,39 @@
             <div class="catalog__item-pic">
               <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="toy">
             </div>
-            <div class="catalog__item--wrapper">
+            <div class="catalog__item-info">
               <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
               <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
-              <b class="catalog__item-price">1 200 руб.</b>
-              <a class="catalog__basket" href="#popup"></a>
+              <div class="catalog__item-prices">
+                <b class="catalog__item-price">1 200 руб.</b>
+                <a class="catalog__basket" href="#popup"></a>
+              </div>
             </div>
           </div>
           <div class="catalog__item">
             <div class="catalog__item-pic">
               <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="basket">
             </div>
-            <div class="catalog__item--wrapper">
+            <div class="catalog__item-info">
               <h3 class="catalog__item-title">Корзинка для белья</h3>
               <p class="catalog__item-desc">Диаметр 15 см, высота 10см</p>
-              <b class="catalog__item-price">690 руб.</b>
-              <a class="catalog__basket" href="#popup"></a>
+              <div class="catalog__item-prices">
+                <b class="catalog__item-price">690 руб.</b>
+                <a class="catalog__basket" href="#popup"></a>
+              </div>
             </div>
           </div>
           <div class="catalog__item">
             <div class="catalog__item-pic">
               <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="big-basket">
             </div>
-            <div class="catalog__item--wrapper">
+            <div class="catalog__item-info">
               <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
               <p class="catalog__item-desc">Диаметр 30 см, высота 30см</p>
-              <b class="catalog__item-price">1 500 руб.</b>
-              <a class="catalog__basket" href="#popup"></a>
+              <div class="catalog__item-prices">
+                <b class="catalog__item-price">1 500 руб.</b>
+                <a class="catalog__basket" href="#popup"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -78,7 +88,7 @@
       </section>
     </main>
     <footer class="footer-bottom">
-      <div class="footer-bottom--wrapper">
+      <div class="footer-bottom__flex container-fluid">
         <div class="footer-bottom__logo">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
         </div>
@@ -114,5 +124,21 @@
         </fieldset>
       </form>
     </div>
+    <script>
+      var navMain = document.querySelector('.top-bar');
+      var navToggle = document.querySelector('.top-bar-nav__toggle');
+
+      navMain.classList.remove('top-bar-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('top-bar-nav--closed')) {
+          navMain.classList.remove('top-bar-nav--closed');
+          navMain.classList.add('top-bar-nav--opened');
+        } else {
+          navMain.classList.add('top-bar-nav--closed');
+          navMain.classList.remove('top-bar-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,25 +1,32 @@
 .feedbacks {
-  @include container;
   margin-bottom: 40px;
 }
 
+.feedbacks__wrapper {
+  min-width: 260px;
+  width: 81%;
+  margin: 0 auto;
+}
+
 .feedbacks__title {
-  padding-left: 30px;
   font-weight: bold;
   line-height: 30px;
 }
 .feedbacks__item {
   line-height: 30px;
-  color: $ghost-btn-color;
-  & cite {
+  color: $dark-gray;
+  margin: 0 auto;
+
+  cite {
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    color: $text-color-black;
+    color: $black;
   }
-  & a {
+
+  a {
     @include clear-arrow;
-    color: $ghost-btn-color;
+    color: $dark-gray;
     font-size: 17px;
     font-weight: normal;
   }
@@ -27,12 +34,14 @@
 }
 
 .feedbacks__arrows {
+  width: auto;
   text-align: center;
-  margin: 35px 0;
+  margin: 35px auto;
 }
 
 .feedbacks__arrow {
   display: inline-block;
+  vertical-align: middle;
   width: 130px;
   box-sizing: border-box;
   height: 50px;
@@ -41,20 +50,23 @@
 
 .feedbacks__arrow--right {
   background-image: url("../img/icon-right-arrow.svg");
-  @include bg-picture;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 50px 28px;
 }
 
 .feedbacks__arrow--left {
   background-image: url("../img/icon-left-arrow.svg");
-  @include bg-picture;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 50px 28px;
+  border-right: none;
+  margin-right: -4px;
 }
 
 @media #{$tablet-width} {
 
   .feedbacks {
-    position: relative;
     padding: 75px 0 40px 0;
     margin-bottom: 65px;
     background-image: url("../img/review@1x.jpg");
@@ -63,30 +75,38 @@
     background-position: top left;
   }
 
+  .feedbacks__wrapper {
+    width: 668px;
+  }
+
   .feedbacks__title {
     font-size: 43px;
     line-height: 50px;
     margin-top: 0;
     margin-bottom: 50px;
   }
+  .feedbacks__items {
+    position: relative;
+  }
 
   .feedbacks__item {
     font-size: 17px;
-    & p {
+  }
+
+  .feedbacks__item p {
       margin-bottom: 70px;
     }
 
-    & cite {
+  .feedbacks__item cite {
       display: block;
       width: 334px;
     }
 
-  }
-
   .feedbacks__arrows {
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     right: 0;
+    margin-bottom: 0;
   }
 
   .feedbacks__arrow {
@@ -97,8 +117,23 @@
   .feedbacks__btn {
     width: 175px;
     position: absolute;
-    top: 75px;
+    top: -100px;
     right: 0;
+  }
+
+}
+
+@media #{$desktop-width} {
+
+  .feedbacks {
+    width: 1050px;
+    margin: 0 auto;
+    padding-left: 175px;
+    box-sizing: border-box;
+  }
+
+  .feedbacks__wrapper {
+    width: 875px;
   }
 
 }

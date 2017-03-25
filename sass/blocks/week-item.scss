@@ -1,6 +1,5 @@
 .week-item {
-  width: 260px;
-  margin: 0 auto;
+
 }
 
 .week-item__title {
@@ -9,7 +8,7 @@
 }
 
 .week-item__advant {
-  color: $light-btn-color;
+  color: $light-green;
   text-transform: uppercase;
   font-size: 17px;
   line-height: 20px;
@@ -17,7 +16,7 @@
 
 .week-item__desc,
 .week-item__table {
-  color: $ghost-btn-color;
+  color: $dark-gray;
 }
 
 .week-item__desc {
@@ -48,7 +47,6 @@
 @media #{$tablet-width} {
 
   .week-item {
-    width: auto;
     @include clearfix;
     position: relative;
   }
@@ -99,6 +97,7 @@
 
   .week-item {
     padding-left: 175px;
+    box-sizing: border-box;
   }
 
   .week-item__title {

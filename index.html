@@ -8,12 +8,33 @@
     <meta name="format-detection" content="telephone=no">
   </head>
   <body>
+    <div class="top-bar top-bar-nav--closed">
+      <div class="top-bar__logo"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></div>
+      <button class="top-bar-nav__toggle">Открыть меню</button>
+      <nav class="top-bar__main-nav">
+        <ul class="top-bar-nav__list">
+          <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
+        </ul>
+      </nav>
+      <nav class="top-bar__user-nav">
+        <ul class="top-bar-nav__user-list">
+          <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-search" href="#">Поиск по сайту</a></li>
+          <li class="top-bar-nav__user-item"><a class="top-bar-nav__user-basket" href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+      <nav class="top-bar__feature-nav top-bar-nav--closed">
+        <ul class="top-bar-nav__feature-list">
+          <li class="top-bar-nav__feature-item"><a href="#">Новые поступления</a></li>
+          <li class="top-bar-nav__feature-item"><a href="#">Распродажа</a></li>
+        </ul>
+      </nav>
+      <p class="top-bar__feature">Бесплатная доставка по России</p>
+    <!-- //Не смогла с такой разметкой на флексы перейти//
     <div class="top-bar">
-      <div class="top-bar__wrapper">
-        <div class="top-bar__logo"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></div>
-        <button class="top-bar-nav__toggle"><i class="vusually-hidden">Открыть меню</i></button>
-      </div>
-      <nav class="top-bar-nav top-bar-nav--closed top-bar-nav--nojs">
+      <div class="top-bar__logo"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></div>
+      <nav class="top-bar-nav top-bar-navclosed">
+        <button class="top-bar-nav__toggle">Открыть меню</button>
           <ul class="top-bar-nav__list">
             <li class="top-bar-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="top-bar-nav__item"><a href="#">Вязание на заказ</a></li>
@@ -26,11 +47,12 @@
             <li class="top-bar-nav__feature-item"><a href="#">Новые поступления</a></li>
             <li class="top-bar-nav__feature-item"><a href="#">Распродажа</a></li>
           </ul>
+          <p class="top-bar__feature">Бесплатная доставка по России</p>
       </nav>
-      <p class="top-bar__feature">Бесплатная доставка по России</p>
+    -->
     </div>
     <header class="page-header page-header--pic">
-      <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
+        <h1 class="page-header__title">Милые штуки ручной <br>работы для дома</h1>
     </header>
     <div class="catalog-section">
       <ul class="catalog-section__buttons">
@@ -40,7 +62,7 @@
     </div>
     <main>
       <section class="week-items">
-        <div class="week-item">
+        <div class="week-item container-fluid">
           <h2 class="week-item__title">Вязаные корзинки</h2>
           <h3 class="week-item__advant">ТОВАР НЕДЕЛИ</h3>
           <p class="week-item__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
@@ -68,42 +90,48 @@
         </div>
       </section>
       <section class="features">
-        <h2 class="features__title">Коротко о нас:</h2>
-        <ul class="features__list">
-          <li class="features__item features__item--eco">Экологически чистые материалы</li>
-          <li class="features__item features__item--scandic">Скандинавский стиль по российской цене</li>
-          <li class="features__item features__item--like">Увеличивает лайки на фотографиях</li>
-          <li class="features__item features__item--hand">Связано вручную с любовью и умилением</li>
-          <li class="features__item features__item--support">Поддержка отечественного производителя</li>
-          <li class="features__item features__item--gift">Поставляется в подарочной упаковке</li>
-        </ul>
+        <div class="container-fluid">
+          <h2 class="features__title">Коротко о нас:</h2>
+          <ul class="features__list">
+            <li class="features__item features__item--eco">Экологически чистые материалы</li>
+            <li class="features__item features__item--scandic">Скандинавский стиль по российской цене</li>
+            <li class="features__item features__item--like">Увеличивает лайки на фотографиях</li>
+            <li class="features__item features__item--hand">Связано вручную с любовью и умилением</li>
+            <li class="features__item features__item--support">Поддержка отечественного производителя</li>
+            <li class="features__item features__item--gift">Поставляется в подарочной упаковке</li>
+          </ul>
+        </div>
       </section>
       <section class="feedbacks">
-        <h2 class="feedbacks__title">Отзывы</h2>
-        <div class="feedbacks__items">
-          <blockquote class="feedbacks__item">
-            <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            <cite>Анастасия Красильникова <a href="@misssssiskras">@misssssiskras</a></cite>
-          </blockquote>
-          <div class="feedbacks__arrows">
-            <div class="feedbacks__arrow feedbacks__arrow--left"></div>
-            <div class="feedbacks__arrow feedbacks__arrow--right"></div>
+        <div class="feedbacks__wrapper">
+          <h2 class="feedbacks__title">Отзывы</h2>
+          <div class="feedbacks__items">
+            <blockquote class="feedbacks__item">
+              <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <cite>Анастасия Красильникова <a href="@misssssiskras">@misssssiskras</a></cite>
+            </blockquote>
+            <div class="feedbacks__arrows">
+              <div class="feedbacks__arrow feedbacks__arrow--left"></div>
+              <div class="feedbacks__arrow feedbacks__arrow--right"></div>
+            </div>
+            <a href="#" class="feedbacks__btn btn">Написать</a>
           </div>
-          <a href="#" class="feedbacks__btn btn">Написать</a>
         </div>
       </section>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <table class="contacts__table">
-          <tr>
-            <td class="contacts__table-attr">e-mail:</td>
-            <td class="contacts__table-value"><a href="info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-          </tr>
-          <tr>
-            <td class="contacts__table-attr">адрес:</td>
-            <td class="contacts__table-value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
-          </tr>
-        </table>
+        <div class="contacts__info">
+          <h2 class="contacts__title">Контакты</h2>
+          <table class="contacts__table">
+            <tr>
+              <td class="contacts__table-attr">e-mail:</td>
+              <td class="contacts__table-value"><a href="info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+            </tr>
+            <tr>
+              <td class="contacts__table-attr">адрес:</td>
+              <td class="contacts__table-value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
+            </tr>
+          </table>
+        </div>
         <div class="contacts__map">
           <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="map">
         </div>
@@ -113,7 +141,7 @@
       </section>
     </main>
     <footer class="footer-bottom">
-      <div class="footer-bottom--wrapper">
+      <div class="footer-bottom__flex container-fluid">
         <div class="footer-bottom__logo">
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
         </div>
@@ -149,5 +177,21 @@
         </fieldset>
       </form>
     </div>
+    <script>
+      var navMain = document.querySelector('.top-bar');
+      var navToggle = document.querySelector('.top-bar-nav__toggle');
+
+      navMain.classList.remove('top-bar-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('top-bar-nav--closed')) {
+          navMain.classList.remove('top-bar-nav--closed');
+          navMain.classList.add('top-bar-nav--opened');
+        } else {
+          navMain.classList.add('top-bar-nav--closed');
+          navMain.classList.remove('top-bar-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
