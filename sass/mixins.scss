@@ -35,18 +35,10 @@
   margin: 0 auto;
 
   @media #{$tablet-width} {
-    min-width: 668px;
-    width: 87%;
+    width: 668px;
   }
 
   @media #{$desktop-width} {
-    min-width: 1050px;
-    width: 91%;
+    width: 1050px;
   }
-}
-
-@mixin bg-picture() {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }

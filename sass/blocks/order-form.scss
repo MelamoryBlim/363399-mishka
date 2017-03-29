@@ -1,7 +1,5 @@
 .order-form {
   margin: 40px auto;
-  min-width: 260px;
-  width: 81%;
 }
 
 .order-form__greeting {
@@ -10,14 +8,18 @@
   font-size: 13px;
   line-height: 24px;
   color: $dark-gray;
+  margin-bottom: 30px;
 }
 
 .order-form__field {
-  position: relative;
-  margin: 35px 0;
   border: none;
+}
+
+.order-form__row {
+  @include container-fluid;
+  position: relative;
   border-top: 1px solid $light-green;
-  padding: 5px 0;
+  padding: 35px 0;
 }
 
 .order-form__legend {
@@ -35,18 +37,18 @@
   background-color: #ffffff;
 }
 
-.order-form__type-field input,
-.order-form__color-field input {
+.order-form__group-type input,
+.order-form__group-color input {
   display: none;
 }
 
 .order-form__label {
   display: block;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 18px;
   font-weight: bold;
-  margin: 20px 0;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .order-form__label--round::before,
@@ -64,6 +66,16 @@
   border-radius: 50%;
 }
 
+.order-form__label--round:hover::before,
+.order-form__label--box:hover::before {
+  border-color: $green-checked;
+}
+
+.order-form__label--round:active::before,
+.order-form__label--box:active::before {
+  border-color: $dark-shadow;
+}
+
 .order-form__group-type input:checked + .order-form__label--round::before {
   background-color: $green-checked;
   box-shadow: inset 0 0 0 10px white;
@@ -76,65 +88,105 @@
   background-size: 22px 16px;
 }
 
-.order-form__name-field input,
-.order-form__phone-field input,
-.order-form__email-field input {
+.order-form__group-name input,
+.order-form__phone-input,
+.order-form__email-input {
   display: block;
-  margin-top: 25px;
   width: 100%;
   min-width: 260px;
   border: none;
   border-bottom: 2px solid #000000;
   background-color: inherit;
-  color: $dark-gray;
+  color: rgba(68,68,68,0.3);
   font-size: 17px;
   font-family: inherit;
-  line-height: 40px;
+  line-height: 18px;
+  padding-bottom: 20px;
+  outline: none;
 }
 
-.order-form__phone-field input {
+.order-form__group-name input:hover,
+.order-form__phone-input:hover,
+.order-form__email-input:hover,
+.order-form__comments-textarea:hover {
+  border-color: $green-checked;
+}
+
+.order-form__group-name input:focus,
+.order-form__phone-input:focus,
+.order-form__email-input:focus,
+.order-form__comments-textarea:focus {
+  color: rgba(68,68,68,1);
+  background-color: inherit;
+}
+
+.order-form__phone-input {
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
-  background-size: 35px;
+  background-size: 25px 24px;
   background-position: right center;
 }
 
-.order-form__email-field input {
+.order-form__email-input {
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
-  background-size: 35px;
+  background-size: 32px 21px;
   background-position: right center;
 }
 
-.order-form__comments-field textarea {
+.order-form__comments-textarea {
   display: block;
-  margin-top: 25px;
+  padding: 15px;
   width: 100%;
   min-width: 260px;
+  box-sizing: border-box;
   border: 2px solid $dark-gray;
   color: $dark-gray-opacity;
   font-size: 17px;
   font-family: inherit;
+  outline: none;
+}
+
+.order-form__comments {
+  font-size: 14px;
+  line-height: 16px;
+  color: $dark-gray;
+  margin-bottom: 30px;
 }
 
 @media #{$tablet-width} {
 
   .order-form {
-    padding: 0;
   }
 
   .order-form__greeting {
-    width: 87%;
     font-size: 17px;
     line-height: 30px;
   }
 
-  .order-form__field {
-    padding: 50px 0;
-    margin: 0;
+  .order-form__label--round::before,
+  .order-form__label--box::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .order-form__group-type input:checked + .order-form__label--round::before {
+    box-shadow: inset 0 0 0 15px white;
+  }
+
+  .order-form__group-color input:checked + .order-form__label--box::before {
+    background-size: 32px 26px;
+  }
+
+  .order-form__field:nth-child(2n-1) {
+    background-color: $bg-color;
+  }
+
+  .order-form__row {
+    border: none;
     display: flex;
     justify-content: space-between;
-    border: none;
+    padding: 52px 0;
   }
 
   .order-form__legend {
@@ -148,14 +200,16 @@
 
   .order-form__label {
     font-size: 19px;
-    line-height: 40px;
+    line-height: 18px;
     box-sizing: border-box;
     margin-top: 0;
   }
 
   .order-form__group-type {
     display: flex;
+    min-height: 128px;
     flex-direction: column;
+    justify-content: space-between;
     width: 475px;
   }
 
@@ -169,6 +223,7 @@
 
   .order-form__label--box {
     width: 230px;
+    padding-bottom: 25px;
   }
 
   .order-form__group-name {
@@ -179,46 +234,42 @@
 
   .order-form__group-name label {
     display: flex;
+    align-items: baseline;
   }
 
   .order-form__label--name {
     margin-right: 20px;
-    line-height: 40px;
   }
 
-  .order-form__name-field input {
+  .order-form__label--name + input {
     margin-top: 0;
+    margin-bottom: 40px;
     font-size: 19px;
-    line-height: 40px;
-    align-self: top;
   }
 
-  .order-form__phone-field input,
-  .order-form__email-field input {
+  .order-form__phone-input,
+  .order-form__email-input {
     width: 495px;
+    background-color: $bg-color;
   }
 
-  .order-form__comments-field {
+  .order-form__row--wrap {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
   }
 
-  .order-form__comments-field textarea {
+  .order-form__comments-textarea {
     width: 485px;
     box-sizing: border-box;
     margin: 0;
     margin-bottom: 55px;
   }
 
-  .order-form__comments-field p {
+  .order-form__comments {
     order: 2;
-  }
-
-  .order-form__color-field,
-  .order-form__phone-field,
-  .order-form__email-field {
-    background-color: $bg-color;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .order-form__btn {
@@ -230,14 +281,15 @@
 
 @media #{$desktop-width} {
 
-  .order-form {
-    padding-right: 175px;
-  }
-
   .order-form__legend {
     width: 175px;
     text-align: center;
     margin: 0;
+  }
+
+  .order-form__row {
+    padding-right: 175px;
+    box-sizing: border-box;
   }
 
   .order-form__group-type {
@@ -252,14 +304,13 @@
     width: 695px;
   }
 
-  .order-form__phone-field input,
-  .order-form__email-field input {
+  .order-form__phone-input,
+  .order-form__email-input {
     width: 695px;
   }
 
-  .order-form__comments-field textarea {
+  .order-form__comments-textarea {
     width: 695px;
-    box-sizing: border-box;
   }
 
   .order-form__btn {

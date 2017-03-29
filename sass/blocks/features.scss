@@ -1,25 +1,15 @@
 .features {
   position: relative;
+  margin-top: 60px;
+
   &::before {
     content: "";
     display: block;
-    position: relative;
     width: 100%;
-    height: 40px;
-    z-index: 10;
-    background-image: radial-gradient(circle at 10px 3px, transparent 12px, white 13px),
-                      radial-gradient(circle at 10px 18px, white 12px, transparent 13px),
-                      radial-gradient(circle at 10px 0, transparent 12px, $shadow 13px),
-                      radial-gradient(circle at 10px 15px, $shadow 12px, transparent 13px);
-    background-position: left bottom,
-                         left bottom,
-                         left bottom,
-                         left bottom;
-    background-size: 20px 20px,
-                     40px 20px,
-                     20px 20px,
-                     40px 20px;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
+    background-size: auto 7px;
   }
 }
 
@@ -37,42 +27,26 @@
 }
 
 .features__item {
-  padding: 17px 0;
+  padding-bottom: 17px;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 }
 
-.features__item--eco::before {
-  background-image: url("../img/icon-feature-1.svg");
-}
-.features__item--scandic::before {
-  background-image: url("../img/icon-feature-3.svg");
-}
-.features__item--like::before {
-  background-image: url("../img/icon-feature-5.svg");
-}
-.features__item--hand::before {
-  background-image: url("../img/icon-feature-2.svg");
-}
-.features__item--support::before {
-  background-image: url("../img/icon-feature-4.svg");
-}
-.features__item--gift::before {
-  background-image: url("../img/icon-feature-6.svg");
+.features__item svg {
+  display: block;
+  fill: $light-green;
+  width: 47px;
+  height: 38px;
+  margin-bottom: 17px;
 }
 
 @media #{$tablet-width} {
+
+  .features::before {
+    height: 15px;
+    background-size: auto 15px;
+  }
 
   .features__title {
     font-size: 43px;
@@ -92,6 +66,7 @@
     flex-basis: 332px;
     font-size: 20px;
     line-height: 22px;
+    padding-bottom: 55px;
   }
 
   .features__item--eco {

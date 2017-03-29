@@ -1,5 +1,14 @@
 .popup {
-  border: 1px solid $dark-shadow;
-  box-shadow: 0 5px 10px rgba(0,0,1,0.25);
-  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.popup--closed {
+  display: none;
 }
