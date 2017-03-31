@@ -200,6 +200,7 @@
   .top-bar__main-nav {
     width: 344px;
     order: 2;
+    z-index: 1;
   }
 
   .top-bar__user-nav {
@@ -233,7 +234,7 @@
     width: auto;
     padding-left: 0;
     padding-right: 36px;
-    padding-top: 22px;
+    padding-top: 24px;
   }
 
   .top-bar__main-item:last-child a {
@@ -275,6 +276,7 @@
   .top-bar__main-nav {
     order: -1;
     width: auto;
+    z-index: 0;
   }
 
   .top-bar__user-nav {

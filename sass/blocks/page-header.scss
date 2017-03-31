@@ -5,7 +5,7 @@
   justify-content: space-between;
   border-top: 1px solid $shadow;
   min-height: 177px;
-  pointer-events: none;
+  height: 100px;
 }
 
 .page-header--pic {
@@ -30,7 +30,9 @@
 
 .page-header__feature {
   display: none;
+  @include clear-list;
 }
+
 .page-header__feature-item {
   @include clear-list;
 }
@@ -46,14 +48,13 @@
   min-width: 260px;
   width: 81%;
   min-height: 103px;
+  height: 50px;
   margin: 0 auto;
-  display: block;
   color: #ffffff;
   font-size: 19px;
   font-weight: bold;
   line-height: 24px;
   text-align: left;
-  vertical-align: middle;
   padding: 0;
   transition: 300ms ease;
   display: flex;
@@ -115,7 +116,6 @@
   .page-header {
     min-height: 224px;
     position: relative;
-    z-index: -1;
 
     &::after {
       content: "";
@@ -214,8 +214,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
-    pointer-events: auto;
     z-index: 0;
+  }
+
+  .page-header--pic {
+    min-height: 746px;
   }
 
   .page-header__title {
