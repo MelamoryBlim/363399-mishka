@@ -5,6 +5,7 @@
 .week-item__title {
   font-size: 25px;
   line-height: 30px;
+  vertical-align: bottom;
 }
 
 .week-item__advant {
@@ -26,6 +27,7 @@
 .week-item__table {
   border-collapse: collapse;
   line-height: 20px;
+  margin-bottom: 30px;
 }
 
 .week-item__table-row {
@@ -41,6 +43,7 @@
   text-align: center;
   font-size: 17px;
   line-height: 24px;
+  color: $dark-gray;
   margin: 25px auto;
 }
 
@@ -67,23 +70,31 @@
   }
 
   .week-item__desc {
-    width: 321px;
+    width: 300px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .week-item__table {
     width: 292px;
+    margin-top: 35px;
+    margin-bottom: 55px;
   }
 
   .week-item__pic {
     position: absolute;
-    top: 140px;
+    top: 133px;
     right: 0;
+  }
+
+  .week-item__pic img {
+    width: 334px;
   }
 
   .week-item__price {
     width: 292px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 35px 0;
+    font-size: 20px;
   }
 
   .week-item__btn {
@@ -103,12 +114,27 @@
   .week-item__title {
     font-size: 53px;
     line-height: 57px;
+    padding-top: 17px;
   }
 
   .week-item__advant {
     position: absolute;
     left: 0;
+    top: 24px;
+  }
+
+  .week-item__table {
+    margin-top: 45px;
+    margin-bottom: 105px;
+  }
+
+  .week-item__pic {
     top: 0;
+    z-index: -1;
+  }
+
+  .week-item__pic img {
+    width: 525px;
   }
 
 }

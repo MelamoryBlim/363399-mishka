@@ -1,5 +1,15 @@
 .popup-form {
+  margin: 100px auto;
+  padding: 43px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 335px;
   text-align: center;
+  background-color: #ffffff;
+  opacity: 1;
+  border: 1px solid $dark-shadow;
+  box-shadow: 0 5px 10px rgba(0,0,1,0.25);
+  z-index: 11;
 }
 
 .popup-form__title {
@@ -34,4 +44,11 @@
 
 .popup-form__btn {
   margin-top: 35px;
+}
+
+@media #{$tablet-width} {
+
+  .popup-form {
+  width: 570px;
+  }
 }

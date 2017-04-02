@@ -15,6 +15,11 @@
   background-color: $white;
 }
 
+.popup-form__btn,
+.order-form__btn {
+  line-height: 44px;
+}
+
 .btn:hover {
   background-color: $dark-gray;
   color: $white;

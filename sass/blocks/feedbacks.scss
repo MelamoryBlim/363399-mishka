@@ -16,21 +16,20 @@
   line-height: 30px;
   color: $dark-gray;
   margin: 0 auto;
+}
 
-  cite {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    color: $black;
-  }
+.feedbacks__item cite {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: $black;
+}
 
-  a {
-    @include clear-arrow;
-    color: $dark-gray;
-    font-size: 17px;
-    font-weight: normal;
-  }
-
+.feedbacks__item a {
+  @include clear-arrow;
+  color: $dark-gray;
+  font-size: 17px;
+  font-weight: normal;
 }
 
 .feedbacks__arrows {
@@ -46,6 +45,14 @@
   box-sizing: border-box;
   height: 50px;
   border: 1px solid $shadow;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .feedbacks__arrow--right {
@@ -73,6 +80,10 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: top left;
+
+    @media #{$retina} {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .feedbacks__wrapper {
@@ -128,6 +139,7 @@
   .feedbacks {
     width: 1050px;
     margin: 0 auto;
+    margin-bottom: 70px;
     padding-left: 175px;
     box-sizing: border-box;
   }
