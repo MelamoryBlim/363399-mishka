@@ -80,6 +80,7 @@
     padding: 0;
     padding-bottom: 45px;
     position: relative;
+    height: auto;
   }
 
   .promo__title {
@@ -101,6 +102,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    height: auto;
   }
 
   .promo__video img {
@@ -109,8 +111,8 @@
   }
 
   .promo__video::before {
-    top: 130%;
-    left: 45%;
+    top: 43%;
+    left: 43%;
   }
 
   .promo__btn {
@@ -119,6 +121,11 @@
 
 }
 @media #{$desktop-width} {
+
+  .promo {
+    padding-bottom: 56px;
+  }
+
 
   .promo__video {
     width: 683px;
