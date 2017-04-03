@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <script>
-    // Picture element HTML5 shiv
     document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async></script>
@@ -177,31 +176,32 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="contacts__info">
-          <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__table">
-            <tr>
-              <td class="contacts__table-attr">e-mail:</td>
-              <td class="contacts__table-value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-            </tr>
-            <tr>
-              <td class="contacts__table-attr">адрес:</td>
-              <td class="contacts__table-value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
-            </tr>
-          </table>
-        </div>
-        <div class="contacts__map">
-          <div id="map" class="map"></div>
-            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="map">
-          </picture>
-        </div>
-        <div class="contacts__btn">
-          <a class="btn" href="#">Напишите нам</a>
+        <div class="contacts__wrapper">
+          <div class="contacts__info">
+            <h2 class="contacts__title">Контакты</h2>
+            <table class="contacts__table">
+              <tr>
+                <td class="contacts__table-attr">e-mail:</td>
+                <td class="contacts__table-value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+              </tr>
+              <tr>
+                <td class="contacts__table-attr">адрес:</td>
+                <td class="contacts__table-value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
+              </tr>
+            </table>
+          </div>
+          <div class="contacts__map">
+            <div id="map" class="map"></div>
+              <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+                <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="map">
+              </picture>
+          </div>
+          <div class="contacts__btn">
+            <a class="btn" href="#">Напишите нам</a>
+          </div>
         </div>
       </section>
     </main>

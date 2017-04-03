@@ -85,6 +85,10 @@
 
 @media #{$tablet-width} {
 
+  .footer-bottom {
+    margin-top: 50px;
+  }
+
   .footer-bottom__flex {
     flex-direction: row;
     justify-content: space-between;
@@ -136,6 +140,5 @@
 }
 
 @media #{$desktop-width} {
-
 
 }

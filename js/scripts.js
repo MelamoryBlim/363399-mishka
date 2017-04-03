@@ -27,8 +27,7 @@ for (var i = 0; i < popUpButton.length; i++) {
   })
 };
 
-popUpAddButton.addEventListener('click', function(e) {
-  e.preventDefault();
+popUpAddButton.addEventListener('click', function() {
   popUp.classList.add('popup--closed');
 });
 
@@ -42,7 +41,6 @@ popUpAddButton.addEventListener('click', function(e) {
       scrollwheel: false,
       disableDoubleClickZoom: true
     });
-
 
     var image = '../img/icon-map-pin.svg';
     var beachMarker = new google.maps.Marker({

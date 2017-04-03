@@ -52,6 +52,8 @@
   .week-item {
     @include clearfix;
     position: relative;
+    margin-top: 65px;
+    margin-bottom: 70px;
   }
 
   .week-item__title {
@@ -114,18 +116,17 @@
   .week-item__title {
     font-size: 53px;
     line-height: 57px;
-    padding-top: 17px;
   }
 
   .week-item__advant {
     position: absolute;
     left: 0;
-    top: 24px;
+    top: 7px;
   }
 
   .week-item__table {
     margin-top: 45px;
-    margin-bottom: 105px;
+    margin-bottom: 108px;
   }
 
   .week-item__pic {

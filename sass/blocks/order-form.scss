@@ -43,19 +43,19 @@
 }
 
 .order-form__label {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .order-form__label--round::before,
 .order-form__label--box::before {
   content: "";
   display: block;
-  float: left;
   width: 36px;
   height: 35px;
   margin-right: 24px;
@@ -102,6 +102,9 @@
   font-family: inherit;
   line-height: 18px;
   padding-bottom: 20px;
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-bottom: 18px;
   outline: none;
 }
 
@@ -157,9 +160,12 @@
 @media #{$tablet-width} {
 
   .order-form {
+    margin-bottom: 0;
   }
 
   .order-form__greeting {
+    margin-left: 175px;
+    margin-right: 175px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -178,6 +184,11 @@
     background-size: 32px 26px;
   }
 
+  .order-form__field {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
   .order-form__field:nth-child(2n-1) {
     background-color: $bg-color;
   }
@@ -186,7 +197,7 @@
     border: none;
     display: flex;
     justify-content: space-between;
-    padding: 52px 0;
+    padding: 10px 0;
   }
 
   .order-form__legend {
@@ -223,7 +234,6 @@
 
   .order-form__label--box {
     width: 230px;
-    padding-bottom: 25px;
   }
 
   .order-form__group-name {
@@ -243,15 +253,21 @@
 
   .order-form__label--name + input {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
     font-size: 19px;
   }
 
   .order-form__phone-input,
   .order-form__email-input {
-    width: 495px;
-    background-color: $bg-color;
+    width: 475px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
   }
+
+  .order-form__phone-input,
+  .order-form__email-input {
+    background-color: $bg-color; //Специально для IE11
+}
 
   .order-form__row--wrap {
     flex-wrap: wrap;
@@ -270,6 +286,8 @@
     order: 2;
     font-size: 17px;
     line-height: 30px;
+    align-self: center;
+    margin: 0;
   }
 
   .order-form__btn {

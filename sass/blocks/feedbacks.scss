@@ -12,6 +12,7 @@
   font-weight: bold;
   line-height: 30px;
 }
+
 .feedbacks__item {
   line-height: 30px;
   color: $dark-gray;
@@ -96,6 +97,7 @@
     margin-top: 0;
     margin-bottom: 50px;
   }
+
   .feedbacks__items {
     position: relative;
   }
@@ -105,13 +107,16 @@
   }
 
   .feedbacks__item p {
-      margin-bottom: 70px;
-    }
+    margin-bottom: 70px;
+    max-width: 780px;
+  }
 
   .feedbacks__item cite {
-      display: block;
-      width: 334px;
-    }
+    display: block;
+    width: 334px;
+    font-size: 17px;
+    line-height: 24px;
+  }
 
   .feedbacks__arrows {
     position: absolute;
@@ -141,11 +146,22 @@
     margin: 0 auto;
     margin-bottom: 70px;
     padding-left: 175px;
+    padding-top: 67px;
+    padding-bottom: 80px;
     box-sizing: border-box;
   }
 
   .feedbacks__wrapper {
     width: 875px;
+  }
+
+  .feedbacks__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedbacks__item p {
+    margin-bottom: 40px;
   }
 
 }

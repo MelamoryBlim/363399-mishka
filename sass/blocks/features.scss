@@ -43,9 +43,13 @@
 
 @media #{$tablet-width} {
 
+  .features {
+    margin-bottom: 45px;
+  }
+
   .features::before {
-    height: 15px;
-    background-size: auto 15px;
+    height: 20px;
+    background-size: auto 20px;
   }
 
   .features__title {
@@ -63,7 +67,7 @@
   .features__item {
     margin: 0;
     box-sizing: border-box;
-    flex-basis: 332px;
+    width: 332px;
     font-size: 20px;
     line-height: 22px;
     padding-bottom: 55px;
@@ -94,6 +98,10 @@
 
 @media #{$desktop-width} {
 
+  .features {
+    margin-top: 70px;
+  }
+
   .features__title {
     margin-left: 175px;
     font-size: 53px;
@@ -106,7 +114,7 @@
   }
 
   .features__item {
-    flex-basis: 350px;
+    width: 350px;
   }
 
 }
