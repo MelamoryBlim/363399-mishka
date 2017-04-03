@@ -85,6 +85,10 @@
 
 @media #{$tablet-width} {
 
+  .contacts__wrapper {
+    @include clearfix;
+  }
+
   .contacts::before {
     height: 20px;
     background-size: auto 20px;
