@@ -121,13 +121,13 @@
       content: "";
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: -7px;
       left: 0;
       width: 100%;
-      height: 15px;
+      height: 32px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: auto 15px;
+      background-size: auto 32px;
     }
   }
 
@@ -190,7 +190,7 @@
 
   .page-header__buttons {
     flex-direction: row;
-    min-height: 124px;
+    min-height: 134px;
   }
 
   .page-header__btn {
@@ -201,7 +201,7 @@
   .page-header__btn a {
     font-size: 20px;
     line-height: 30px;
-    min-height: 119px;
+    min-height: 129px;
     padding: 0;
   }
 
@@ -227,11 +227,11 @@
     line-height: 57px;
     width: 1050px;
     margin: 0 auto;
-    padding-bottom: 95px;
+    padding-bottom: 105px;
   }
 
   .page-header__title--main {
-    padding-bottom: 275px;
+    padding-bottom: 260px;
   }
 
   .page-header__feature {
@@ -252,7 +252,11 @@
   .page-header__feature-item {
     display: inline-block;
     margin: 0;
-    padding: 22px 30px 22px 0;
+    padding: 22px 32px;
+
+    &:first-child {
+      padding-left: 0;
+    }
   }
 
   .page-header__feature-item a {

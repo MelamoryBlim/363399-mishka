@@ -15,18 +15,6 @@ var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
 
-gulp.task("serve", ["style"], function() {
-  server.init({
-    server: ".",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
-});
 
 gulp.task("copy", function() {
   return gulp.src([
@@ -90,4 +78,22 @@ gulp.task("build", function(fn) {
     "symbols",
     fn
   );
+});
+
+gulp.task("html:copy", function() {
+  return gulp.src("*.html")
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("html:update", ["html:copy"], function(done) {
+  server.reload();
+  done();
+});
+
+gulp.task("serve", function() {
+  server.init({
+    server: "build/"
+  });
+  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("*.html", ["html:update"]);
 });
