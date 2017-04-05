@@ -1,6 +1,6 @@
 .features {
   position: relative;
-  margin-top: 60px;
+  margin-top: 35px;
 
   &::before {
     content: "";
@@ -17,6 +17,8 @@
   font-size: 25px;
   line-height: 30px;
   text-align: left;
+  margin-top: 30px;
+  margin-bottom: 35px;
 }
 
 .features__list {
@@ -44,17 +46,18 @@
 @media #{$tablet-width} {
 
   .features {
-    margin-bottom: 45px;
+    margin-bottom: 20px;
   }
 
   .features::before {
-    height: 20px;
-    background-size: auto 20px;
+    height: 15px;
+    background-size: auto 15px;
   }
 
   .features__title {
+    margin-top: 50px;
     font-size: 43px;
-    line-height: 50px;
+    line-height: 60px;
   }
 
   .features__list {
@@ -99,10 +102,17 @@
 @media #{$desktop-width} {
 
   .features {
-    margin-top: 70px;
+    margin-top: 75px;
+  }
+
+  .features::before {
+    height: 25px;
+    background-size: auto 25px;
   }
 
   .features__title {
+    margin-top: 55px;
+    margin-bottom: 55px;
     margin-left: 175px;
     font-size: 53px;
     line-height: 57px;

@@ -6,6 +6,7 @@
   font-size: 25px;
   line-height: 30px;
   vertical-align: bottom;
+  margin: 5px auto;
 }
 
 .week-item__advant {
@@ -13,6 +14,9 @@
   text-transform: uppercase;
   font-size: 17px;
   line-height: 20px;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 23px;
 }
 
 .week-item__desc,
@@ -52,20 +56,20 @@
   .week-item {
     @include clearfix;
     position: relative;
-    margin-top: 65px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .week-item__title {
     font-size: 43px;
     line-height: 50px;
     float: left;
+    margin-bottom: 55px;
   }
 
   .week-item__advant {
     line-height: 17px;
     width: 130px;
-    padding: 35px 30px;
+    padding: 20px 10px;
     text-align: center;
     float: right;
     @include clearfix;
@@ -85,7 +89,7 @@
 
   .week-item__pic {
     position: absolute;
-    top: 133px;
+    top: 120px;
     right: 0;
   }
 
@@ -116,6 +120,7 @@
   .week-item__title {
     font-size: 53px;
     line-height: 57px;
+    margin-top: 50px;
   }
 
   .week-item__advant {
@@ -126,7 +131,7 @@
 
   .week-item__table {
     margin-top: 45px;
-    margin-bottom: 108px;
+    margin-bottom: 105px;
   }
 
   .week-item__pic {

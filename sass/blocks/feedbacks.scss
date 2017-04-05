@@ -10,7 +10,10 @@
 
 .feedbacks__title {
   font-weight: bold;
+  font-size: 25px;
   line-height: 30px;
+  margin-top: 15px;
+  margin-bottom: 35px;
 }
 
 .feedbacks__item {
@@ -36,7 +39,7 @@
 .feedbacks__arrows {
   width: auto;
   text-align: center;
-  margin: 35px auto;
+  margin: 30px auto 40px auto;
 }
 
 .feedbacks__arrow {
@@ -44,7 +47,7 @@
   vertical-align: middle;
   width: 130px;
   box-sizing: border-box;
-  height: 50px;
+  height: 52px;
   border: 1px solid $shadow;
 
   &:hover {

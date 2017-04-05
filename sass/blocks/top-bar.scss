@@ -228,6 +228,7 @@
   .top-bar__main-item,
   .top-bar__user-item {
     display: inline-block;
+    vertical-align: baseline;
     width: auto;
     background-color: transparent;
     border: none;
