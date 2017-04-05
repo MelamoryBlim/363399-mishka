@@ -1,0 +1,12 @@
+.week-items {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+@media #{$desktop-width} {
+
+  .week-items {
+    margin-top: 65px;
+  }
+
+}

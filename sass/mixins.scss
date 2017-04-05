@@ -16,19 +16,6 @@
   }
 }
 
-@mixin container() {
-  min-width: 320px;
-  margin: 0 auto;
-
-  @media #{$tablet-width} {
-    width: 668px;
-  }
-
-  @media #{$desktop-width} {
-    width: 1050px;
-  }
-}
-
 @mixin container-fluid {
   min-width: 260px;
   width: 81%;

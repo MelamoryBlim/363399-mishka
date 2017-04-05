@@ -1,9 +1,9 @@
 .promo {
-  @include container;
+  @include container-fluid;
   border: 1px solid $shadow;
   box-sizing: border-box;
-  width: 260px;
-  padding: 0 30px 30px 30px;
+  padding-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .promo:hover {
@@ -15,28 +15,35 @@
 }
 
 .promo__title {
-  margin-left: 34px;
+  margin-left: 30px;
   font-size: 17px;
   line-height: 24px;
 
   &::before {
     content: "";
     display: inline-block;
+    vertical-align: bottom;
+    float: left;
     width: 32px;
-    height: 23px;
+    height: 32px;
     margin-right: 25px;
     background-image: url("../img/icon-video.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 
 }
 
 .promo__video {
   position: relative;
-  width: 260px;
+  width: 258px;
   height: 150px;
+  margin: 0 auto;
+}
+
+.promo__video img {
+  width: 100%;
 }
 
 .promo__video::before {
@@ -63,7 +70,7 @@
 }
 
 .promo__desc {
-  margin: 30px auto;
+  margin: 30px;
   font-size: 13px;
   line-height: 24px;
   text-align: left;
@@ -72,6 +79,7 @@
 
 .promo__btn {
   margin: 0 auto;
+  width: 200px;
 }
 
 @media #{$tablet-width} {
@@ -80,13 +88,19 @@
     padding: 0;
     padding-bottom: 45px;
     position: relative;
-    height: auto;
+    margin-bottom: 60px;
   }
 
   .promo__title {
     margin-top: 490px;
     font-size: 20px;
     line-height: 24px;
+
+    &::before {
+      float: none;
+      height: 32px;
+      vertical-align: middle;
+    }
   }
 
   .promo__desc {
@@ -120,12 +134,13 @@
   }
 
 }
+
 @media #{$desktop-width} {
 
   .promo {
-    padding-bottom: 56px;
+    padding-bottom: 63px;
+    margin-bottom: 105px;
   }
-
 
   .promo__video {
     width: 683px;
@@ -138,18 +153,18 @@
 
   .promo__title {
     width: 225px;
-    margin: 40px 40px 40px auto;
+    margin: 40px 40px 35px auto;
 
     &::before {
       display: block;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
   }
 
   .promo__desc {
     width: 225px;
-    margin: 0 40px 50px auto;
+    margin: 0 40px 46px auto;
   }
 
   .promo__btn {
