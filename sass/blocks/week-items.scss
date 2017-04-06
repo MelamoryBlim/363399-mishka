@@ -1,6 +1,14 @@
 .week-items {
-  margin-top: 25px;
+  margin-top: 27px;
   margin-bottom: 0;
+}
+
+@media #{$tablet-width} {
+
+  .week-items {
+    margin-top: 40px;
+  }
+
 }
 
 @media #{$desktop-width} {

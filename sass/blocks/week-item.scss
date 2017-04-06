@@ -26,12 +26,13 @@
 
 .week-item__desc {
   line-height: 24px;
+  margin-bottom: 18px;
 }
 
 .week-item__table {
   border-collapse: collapse;
   line-height: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .week-item__table-row {
@@ -39,7 +40,7 @@
 }
 
 .week-item__table-cell {
-  padding: 10px 29px 10px 0;
+  padding: 9px 29px 10px 0;
 }
 
 .week-item__price {
@@ -48,7 +49,7 @@
   font-size: 17px;
   line-height: 24px;
   color: $dark-gray;
-  margin: 25px auto;
+  margin: 18px auto 26px auto;
 }
 
 @media #{$tablet-width} {
@@ -63,7 +64,7 @@
     font-size: 43px;
     line-height: 50px;
     float: left;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 
   .week-item__advant {
@@ -89,7 +90,7 @@
 
   .week-item__pic {
     position: absolute;
-    top: 120px;
+    top: 115px;
     right: 0;
   }
 
@@ -120,18 +121,18 @@
   .week-item__title {
     font-size: 53px;
     line-height: 57px;
-    margin-top: 50px;
+    margin-top: 52px;
   }
 
   .week-item__advant {
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 46px;
   }
 
   .week-item__table {
-    margin-top: 45px;
-    margin-bottom: 105px;
+    margin-top: 50px;
+    margin-bottom: 108px;
   }
 
   .week-item__pic {
